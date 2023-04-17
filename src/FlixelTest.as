@@ -2,7 +2,7 @@ package
 {
 	import org.flixel.*;
 	[SWF(width="720", height="720", backgroundColor="#000000")]
-    [Frame(factoryClass="Preloader")]
+    	[Frame(factoryClass="Preloader")]
 
 	public class FlixelTest extends FlxGame
 	{

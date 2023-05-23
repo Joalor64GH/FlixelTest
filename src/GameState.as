@@ -4,11 +4,16 @@ package
 
 	public class GameState extends FlxState
 	{
-        	[Embed(source="data/beep.mp3")] protected var Beep:Class;
+        	[Embed(source="/assets/sounds/beep.mp3")] protected var Beep:Class;
+		[Embed(source="/assets/images/wall.png")] protected var Wall:Class;
 
 		override public function create():void
 		{
-			FlxG.bgColor = 0xFF000000;
+			var sprite:FlxSprite;
+			sprite = new FlxSprite(0, 0, Wall);
+			sprite.alignment = "center";
+			add(sprite);
+
 			var t:FlxText;
 			t = new FlxText(0,FlxG.height/2-20,FlxG.width,"Hello World");
 			t.size = 32;
@@ -27,8 +32,9 @@ package
 		{
 			super.update();
 
-			if(FlxG.mouse.justPressed())
+			if(FlxG.mouse.justPressed()) {
 				FlxG.play(Beep,0.35);
+			}
 		}
 	}
 }

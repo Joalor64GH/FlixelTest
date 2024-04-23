@@ -4,8 +4,8 @@ package
 
 	public class GameState extends FlxState
 	{
-        	[Embed(source="/assets/sounds/beep.mp3")] protected var Beep:Class;
-		[Embed(source="/assets/images/wall.png")] protected var Wall:Class;
+		[Embed(source="data/beep.mp3")] protected var Beep:Class;
+		[Embed(source="data/wall.png")] protected var Wall:Class;
 
 		override public function create():void
 		{
@@ -20,7 +20,7 @@ package
 			t.alignment = "center";
 			add(t);
 
-            		t = new FlxText(FlxG.width/2-100,FlxG.height-30,200,"Click to play sound effect");
+			t = new FlxText(FlxG.width/2-100,FlxG.height-30,200,"Click to play sound effect");
 			t.size = 16;
 			t.alignment = "center";
 			add(t);
